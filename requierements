@@ -1,0 +1,12 @@
+sqlite
+pandas
+flask
+venv
+sqlalchemy
+pip install -U Flask-SQLAlchemy
+pip install sqlalchemy-utils
+pip install flask-migrate
+
+venv\Scripts\activate
+set FLASK_APP=main.py
+flask run
