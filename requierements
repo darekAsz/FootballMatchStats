@@ -6,6 +6,11 @@ sqlalchemy
 pip install -U Flask-SQLAlchemy
 pip install sqlalchemy-utils
 pip install flask-migrate
+pip install flask-bootstrap
+
+pip freeze > requirements.txt
+gcloud app deploy --project future-enigma-273213
+
 
 venv\Scripts\activate
 set FLASK_APP=main.py

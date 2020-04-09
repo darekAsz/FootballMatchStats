@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, {{ user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-    {% endfor %}
+
+    <div class="col-md-3">
+        <form action="{{ url_for('index') }}" method="post">
+            <select name=selected_team method="GET" action="/index">
+                {% for team in teams %}
+                    <option value= "{{team}}" SELECTED>{{team}}</option>"
+                {% endfor %}
+            </select>
+            <p> How many matches: <input name="matches_count"></p>
+            <table class="record_table">
+            {% for short, long in columns.items() %}
+                <tr><td><input  type="checkbox" name="selected_columns" value="{{ short }}" > {{ long }}</td></tr>
+            {% endfor %}
+            </table>
+            <p><input type="submit" value="Submit"></p>
+        </form>
+    </div>
+    <div class="col-md-9">
+    sdads
+    </div>
 {% endblock %}

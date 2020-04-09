@@ -1,0 +1,14 @@
+/* style for left panel checkboxes */
+.record_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.record_table tr:hover {
+    background: #eee;
+}
+.record_table td {
+    border: 1px solid #eee;
+}
+.highlight_row {
+    background: #eee;
+}
